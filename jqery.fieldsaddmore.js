@@ -53,8 +53,7 @@
 
         //add more content Event
         base.addClick = function() {
-            $("form").on("click", base.options.addbtn, function() {
-
+            $("form").on("click", base.options.addbtn, function() {                
                 //callback before add              
                 base.options.callbackBeforeAddClick(base.$el, base.options);
 

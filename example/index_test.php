@@ -7,40 +7,42 @@
 
     </head>
     <body>
-        <div>Example 1</div>
-        <form action="">
+        <div>Example 2</div>
+        <form action="" method="POST">
             <div class="admore-fields">
 
-            </div>        
+            </div>
             <a href="#" class="fieldsaddmore-addbtn">Add more</a>
 
             <script id="fieldsaddmore-template" type="text/template">
             <div class="fieldsaddmore-row rowId">
-                <input type="text" name="items[key][field1]" />
-                <input type="text" name="items[key][field2]" />
-                <input type="text" name="items[key][field3]" />
+                <input type="text" name="item[key][field1]" />
+                <input type="text" name="item[key][field2]" />
+                <input type="text" name="item[key][field3]" />
                 <a href="#" data-rowid="key" class="fieldsaddmore-removebtn">Remove</a>
-            </div> 
+            </div>
             </script>
 
             <br><br><br><br><br>
             <div class="admore-fields2">
 
-            </div>        
+            </div>
             <a href="#" class="fieldsaddmore-addbtn2">Add more</a>
 
             <script id="fieldsaddmore-template2" type="text/template">
-           <div class="fieldsaddmore-row2 rowId">
-                <input type="text" name="items2[key][field1]" />
-                <input type="text" name="items2[key][field2]" />
-                <input type="text" name="items2[key][field3]" />
-                <input type="text" name="items2[key][field4]" />
+            <div class="fieldsaddmore-row2 rowId">
+                <input type="text" name="item2[key][field1]" />
+                <input type="text" name="item2[key][field2]" />
+                <input type="text" name="item2[key][field3]" />
+                <input type="text" name="item2[key][field4]" />
                 <a href="#" data-rowid="key" class="fieldsaddmore-removebtn2">Remove</a>
-            </div>    
+            </div>
             </script>
+            <br>
+            <input type="submit" value="Submit" />
         </form>
         <script src="../jquery.min.js"></script>
-        <script src="../jqery.fieldsaddmore.min.js"></script>
+        <script src="../jqery.fieldsaddmore.js"></script>
         <script type="text/javascript">
 (function($) {
     $('.admore-fields').fieldsaddmore();
@@ -64,3 +66,9 @@
     </body>
 
 </html>
+<?php
+if(!empty($_POST)){
+    print_r($_POST);
+    exit;
+}
+?>
