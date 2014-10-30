@@ -11,10 +11,10 @@
         <form action="">
             <!-- Main element container -->
             <div class="admore-fields">
-            </div>        
+            </div>
             <!-- Add more button -->
             <a href="#" class="fieldsaddmore-addbtn">Add more</a>
-            
+
             <!-- Addmore template -->
             <script id="fieldsaddmore-template" type="text/template">
             <div class="fieldsaddmore-row rowId">
@@ -22,17 +22,17 @@
                 <input type="text" name="items[key][field2]" />
                 <input type="text" name="items[key][field3]" />
                 <a href="#" data-rowid="key" class="fieldsaddmore-removebtn">Remove</a>
-            </div> 
+            </div>
             </script>
 
             <br><br><br><br><br>
-            
+
             <!-- Main element container -->
             <div class="admore-fields2">
-            </div>        
+            </div>
             <!-- Add more button -->
             <a href="#" class="fieldsaddmore-addbtn2">Add more</a>
-            
+
             <!-- Addmore template -->
             <script id="fieldsaddmore-template2" type="text/template">
             <div class="fieldsaddmore-row2 rowId">
@@ -41,18 +41,18 @@
                 <input type="text" name="items2[key][field3]" />
                 <input type="text" name="items2[key][field4]" />
                 <a href="#" data-rowid="key" class="fieldsaddmore-removebtn2">Remove</a>
-            </div>    
+            </div>
             </script>
         </form>
-        
+
         <script src="../jquery.min.js"></script>
         <script src="../jqery.fieldsaddmore.min.js"></script>
         <script type="text/javascript">
         (function($) {
-            
+
             //Simple plugin implementation
             $('.admore-fields').fieldsaddmore();
-            
+
             //Imlementation with different elements and callback function
             $('.admore-fields2').fieldsaddmore({
                 templateEle: "#fieldsaddmore-template2",
@@ -87,3 +87,9 @@
         </script>
     </body>
 </html>
+<?php
+if(!empty($_POST)){
+    print_r($_POST);
+    exit;
+}
+?>

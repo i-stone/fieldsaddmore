@@ -78,7 +78,7 @@
                 $(this).blur();
 
                 //callback before add              
-                base.options.callbackBeforeRemoveClick(base.$el, base.options);
+                base.options.callbackAfterRemoveClick(base.$el, base.options);
                 return false;
             });
         };
