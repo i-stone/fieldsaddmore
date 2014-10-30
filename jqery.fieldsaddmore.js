@@ -24,10 +24,13 @@
             base.addClick();
             base.removeClick();
 
-            // initialization of content
-            if (base.options.startAt) {
-                rowId = base.options.startAt;
+            // Set start row ID            
+            if($(base.options.rowEle).length>0){
+                rowId = parseInt($(base.options.rowEle).last().find(base.options.removebtn).data('rowid'));
+            }else{
+                rowId = 0;
             }
+            
             if (base.options.min) {
                 for (i = 1; i <= base.options.min; i++) {
                     base.content();
@@ -93,8 +96,7 @@
         rowEle: ".fieldsaddmore-row",
         addbtn: ".fieldsaddmore-addbtn",
         removebtn: ".fieldsaddmore-removebtn",
-        min: 1,
-        startAt: 0,
+        min: 1,        
         callbackBeforeInit: function(ele, options) {
         },
         callbackBeforeAdd: function(ele, options) {
