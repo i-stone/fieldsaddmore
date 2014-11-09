@@ -9,7 +9,7 @@
 
 
 #### Default Example
-
+```xml
     <!-- Main element container -->
     <div class="admore-fields">
     </div>
@@ -34,10 +34,10 @@
 
         })(jQuery);
     </script>
-
+```
 #### Custom Example
 
-
+```xml
     <!-- Main element container -->
     <div class="admore-fields2">
     </div>
@@ -90,3 +90,5 @@
             });
         })(jQuery);
     </script>
+
+```
