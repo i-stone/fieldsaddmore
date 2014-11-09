@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fieldsaddmore by karanjilka</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Fieldsaddmore</h1>
+        <p>Simple jquery plugin for form fileds addmore</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/karanjilka/fieldsaddmore" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/karanjilka/fieldsaddmore/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/karanjilka/fieldsaddmore/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>
+<a id="fields-addmore-plugin-in-jquery" class="anchor" href="#fields-addmore-plugin-in-jquery" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fields addmore Plugin in jQuery</h2>
+
+<h4>
+<a id="first-include-js-file" class="anchor" href="#first-include-js-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>First include .js file</h4>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="nt">script</span> <span class="na">src</span>=<span class="s2">"js/jquery.min.js"</span>&gt;&lt;/<span class="nt">script</span>&gt;
+&lt;<span class="nt">script</span> <span class="na">src</span>=<span class="s2">"js/jqery.fieldsaddmore.min.js"</span>&gt;&lt;/<span class="nt">script</span>&gt;</pre></div>
+
+<h4>
+<a id="default-example" class="anchor" href="#default-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Default Example</h4>
+
+<div class="highlight highlight-xml"><pre><span class="cm">&lt;!-- Main element container --&gt;</span>
+&lt;<span class="nt">div</span> <span class="na">class</span>=<span class="s2">"admore-fields"</span>&gt;
+&lt;/<span class="nt">div</span>&gt;
+<span class="cm">&lt;!-- Add more button --&gt;</span>
+&lt;<span class="nt">a</span> <span class="na">href</span>=<span class="s2">"#"</span> <span class="na">class</span>=<span class="s2">"fieldsaddmore-addbtn"</span>&gt;Add more&lt;/<span class="nt">a</span>&gt;
+
+<span class="cm">&lt;!-- Addmore template --&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">id</span>=<span class="s2">"fieldsaddmore-template"</span> <span class="na">type</span>=<span class="s2">"text/template"</span>&gt;
+    &lt;<span class="nt">div</span> <span class="na">class</span>=<span class="s2">"fieldsaddmore-row rowId"</span>&gt;
+        &lt;<span class="nt">input</span> <span class="na">type</span>=<span class="s2">"text"</span> <span class="na">name</span>=<span class="s2">"items[key][field1]"</span> /&gt;
+        &lt;<span class="nt">input</span> <span class="na">type</span>=<span class="s2">"text"</span> <span class="na">name</span>=<span class="s2">"items[key][field2]"</span> /&gt;
+        &lt;<span class="nt">input</span> <span class="na">type</span>=<span class="s2">"text"</span> <span class="na">name</span>=<span class="s2">"items[key][field3]"</span> /&gt;
+        &lt;<span class="nt">a</span> <span class="na">href</span>=<span class="s2">"#"</span> <span class="na">data-rowid</span>=<span class="s2">"key"</span> <span class="na">class</span>=<span class="s2">"fieldsaddmore-removebtn"</span>&gt;Remove&lt;/<span class="nt">a</span>&gt;
+    &lt;/<span class="nt">div</span>&gt;
+&lt;/<span class="nt">script</span>&gt;</pre></div>
+
+<div class="highlight highlight-javascript"><pre><span class="c1">//Simple plugin implementation</span>
+$(<span class="s1">'.admore-fields'</span>).fieldsaddmore();</pre></div>
+
+<h4>
+<a id="custom-example" class="anchor" href="#custom-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Example</h4>
+
+<div class="highlight highlight-xml"><pre><span class="cm">&lt;!-- Main element container --&gt;</span>
+&lt;<span class="nt">div</span> <span class="na">class</span>=<span class="s2">"admore-fields2"</span>&gt;
+&lt;/<span class="nt">div</span>&gt;
+<span class="cm">&lt;!-- Add more button --&gt;</span>
+&lt;<span class="nt">a</span> <span class="na">href</span>=<span class="s2">"#"</span> <span class="na">class</span>=<span class="s2">"fieldsaddmore-addbtn2"</span>&gt;Add more&lt;/<span class="nt">a</span>&gt;
+
+<span class="cm">&lt;!-- Addmore template --&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">id</span>=<span class="s2">"fieldsaddmore-template2"</span> <span class="na">type</span>=<span class="s2">"text/template"</span>&gt;
+    &lt;<span class="nt">div</span> <span class="na">class</span>=<span class="s2">"fieldsaddmore-row2 rowId"</span>&gt;
+        &lt;<span class="nt">input</span> <span class="na">type</span>=<span class="s2">"text"</span> <span class="na">name</span>=<span class="s2">"items2[key][field1]"</span> /&gt;
+        &lt;<span class="nt">input</span> <span class="na">type</span>=<span class="s2">"text"</span> <span class="na">name</span>=<span class="s2">"items2[key][field2]"</span> /&gt;
+        &lt;<span class="nt">input</span> <span class="na">type</span>=<span class="s2">"text"</span> <span class="na">name</span>=<span class="s2">"items2[key][field3]"</span> /&gt;
+        &lt;<span class="nt">input</span> <span class="na">type</span>=<span class="s2">"text"</span> <span class="na">name</span>=<span class="s2">"items2[key][field4]"</span> /&gt;
+        &lt;<span class="nt">a</span> <span class="na">href</span>=<span class="s2">"#"</span> <span class="na">data-rowid</span>=<span class="s2">"key"</span> <span class="na">class</span>=<span class="s2">"fieldsaddmore-removebtn2"</span>&gt;Remove&lt;/<span class="nt">a</span>&gt;
+    &lt;/<span class="nt">div</span>&gt;
+&lt;/<span class="nt">script</span>&gt;</pre></div>
+
+<div class="highlight highlight-javascript"><pre><span class="c1">//Imlementation with different elements and callback function</span>
+$(<span class="s1">'.admore-fields2'</span>).fieldsaddmore({
+    templateEle<span class="o">:</span> <span class="s2">"#fieldsaddmore-template2"</span>,
+    rowEle<span class="o">:</span> <span class="s2">".fieldsaddmore-row2"</span>,
+    addbtn<span class="o">:</span> <span class="s2">".fieldsaddmore-addbtn2"</span>,
+    removebtn<span class="o">:</span> <span class="s2">".fieldsaddmore-removebtn2"</span>,
+    min<span class="o">:</span> <span class="m">1</span>,
+    <span class="nf">callbackBeforeInit</span>: <span class="kt">function</span>(<span class="nv">ele</span>, <span class="nv">options</span>) {
+        <span class="nc">console</span><span class="nf">.log</span>(<span class="s1">'BeforeInit'</span>);
+    },
+    <span class="nf">callbackBeforeAdd</span>: <span class="kt">function</span>(<span class="nv">ele</span>, <span class="nv">options</span>) {
+        <span class="nc">console</span><span class="nf">.log</span>(<span class="s1">'Before Content Add'</span>);
+    },
+    <span class="nf">callbackAfterAdd</span>: <span class="kt">function</span>(<span class="nv">ele</span>, <span class="nv">options</span>) {
+        <span class="nc">console</span><span class="nf">.log</span>(<span class="s1">'After Content Add'</span>);
+    },
+    <span class="nf">callbackBeforeAddClick</span>: <span class="kt">function</span>(<span class="nv">ele</span>, <span class="nv">options</span>) {
+        <span class="nc">console</span><span class="nf">.log</span>(<span class="s1">'Before Add Click'</span>);
+    },
+    <span class="nf">callbackAfterAddClick</span>: <span class="kt">function</span>(<span class="nv">ele</span>, <span class="nv">options</span>) {
+        <span class="nc">console</span><span class="nf">.log</span>(<span class="s1">'After Add Click'</span>);
+    },
+    <span class="nf">callbackBeforeRemoveClick</span>: <span class="kt">function</span>(<span class="nv">ele</span>, <span class="nv">options</span>) {
+        <span class="nc">console</span><span class="nf">.log</span>(<span class="s1">'Before Remove Click'</span>);
+    },
+    <span class="nf">callbackAfterRemoveClick</span>: <span class="kt">function</span>(<span class="nv">ele</span>, <span class="nv">options</span>) {
+        <span class="nc">console</span><span class="nf">.log</span>(<span class="s1">'After Remove Click'</span>);
+    }
+});</pre></div>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/karanjilka">karanjilka</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
