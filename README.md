@@ -1,14 +1,14 @@
 ## Fields addmore Plugin in jQuery
 
 
-First include .js file
+#### First include .js file
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jqery.fieldsaddmore.min.js"></script>
 
 
 
-Default Example
+#### Default Example
 
     <!-- Main element container -->
     <div class="admore-fields">
@@ -35,7 +35,7 @@ Default Example
         })(jQuery);
     </script>
 
-Custom Example
+#### Custom Example
 
 
     <!-- Main element container -->
