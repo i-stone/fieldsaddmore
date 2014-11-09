@@ -16,7 +16,7 @@
     "dependencies": {
         "jquery": ">=v1.11"
     },
-    "description": "Addmore in form",
+    "description": "HTML form elements addmore",
     "keywords": [
         "addmore",
         "jquery",
