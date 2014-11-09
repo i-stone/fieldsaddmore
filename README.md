@@ -27,15 +27,9 @@
 </script>
 ```
 
-```xml
-    <script type="text/javascript">
-        (function($) {
-
-            //Simple plugin implementation
-            $('.admore-fields').fieldsaddmore();
-
-        })(jQuery);
-    </script>
+```javascript
+//Simple plugin implementation
+$('.admore-fields').fieldsaddmore();
 ```
 #### Custom Example
 
@@ -57,40 +51,34 @@
     </div>
 </script>
 ```
-```xml
-<script type="text/javascript">
-    (function($) {
-
-        //Imlementation with different elements and callback function
-        $('.admore-fields2').fieldsaddmore({
-            templateEle: "#fieldsaddmore-template2",
-            rowEle: ".fieldsaddmore-row2",
-            addbtn: ".fieldsaddmore-addbtn2",
-            removebtn: ".fieldsaddmore-removebtn2",
-            min: 1,
-            callbackBeforeInit: function(ele, options) {
-                console.log('BeforeInit');
-            },
-            callbackBeforeAdd: function(ele, options) {
-                console.log('Before Content Add');
-            },
-            callbackAfterAdd: function(ele, options) {
-                console.log('After Content Add');
-            },
-            callbackBeforeAddClick: function(ele, options) {
-                console.log('Before Add Click');
-            },
-            callbackAfterAddClick: function(ele, options) {
-                console.log('After Add Click');
-            },
-            callbackBeforeRemoveClick: function(ele, options) {
-                console.log('Before Remove Click');
-            },
-            callbackAfterRemoveClick: function(ele, options) {
-                console.log('After Remove Click');
-            }
-        });
-    })(jQuery);
-</script>
-
+```javascript
+//Imlementation with different elements and callback function
+$('.admore-fields2').fieldsaddmore({
+    templateEle: "#fieldsaddmore-template2",
+    rowEle: ".fieldsaddmore-row2",
+    addbtn: ".fieldsaddmore-addbtn2",
+    removebtn: ".fieldsaddmore-removebtn2",
+    min: 1,
+    callbackBeforeInit: function(ele, options) {
+        console.log('BeforeInit');
+    },
+    callbackBeforeAdd: function(ele, options) {
+        console.log('Before Content Add');
+    },
+    callbackAfterAdd: function(ele, options) {
+        console.log('After Content Add');
+    },
+    callbackBeforeAddClick: function(ele, options) {
+        console.log('Before Add Click');
+    },
+    callbackAfterAddClick: function(ele, options) {
+        console.log('After Add Click');
+    },
+    callbackBeforeRemoveClick: function(ele, options) {
+        console.log('Before Remove Click');
+    },
+    callbackAfterRemoveClick: function(ele, options) {
+        console.log('After Remove Click');
+    }
+});
 ```
