@@ -22,7 +22,7 @@
         }
     ],
     "dependencies": {
-        "jquery": ">=v1.11"
+        "jquery": ">=1.11"
     },
     "homepage": "https://github.com/i-stone/fieldsaddmore",
     "bugs": "https://github.com/i-stone/fieldsaddmore/issues",
