@@ -1,0 +1,34 @@
+{
+    "name": "fieldsaddmore",
+    "version": "1.0",
+    "main": ["./jqery.fieldsaddmore.js", "./jqery.fieldsaddmore.min.js"],
+    "ignore":
+            [
+                "README*",
+                "LICENSE*",
+                "**/*.sass",
+                "**/*.coffee",
+                "**/sample.*",
+                "**/rainbow.js",
+                "**/rainbow.css",
+                "**/jquery.js",
+                "**/jquery.css",
+                "samples",
+                "spec",
+                "bourbon",
+                "neat",
+                "packages",
+                "images",
+                "Cakefile*",
+                "Rakefile*",
+                "Gemfile*",
+                ".git*",
+                ".travis*",
+                "*bower.json",
+                "*jquery.json",
+                "index*"
+            ],
+    "dependencies": {
+        "jquery": "latest"
+    }
+}
