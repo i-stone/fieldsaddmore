@@ -1,7 +1,15 @@
 {
     "name": "fieldsaddmore",
-    "version": "1.0",
     "title": "Fields Addmore",
+    "description": "HTML form elements addmore",
+    "keywords": [
+        "addmore",
+        "jquery",
+        "fields",
+        "multiple",
+        "form"
+    ],
+    "version": "1.0",
     "author": {
         "name": "I Stone",
         "email": "dinesh.rabara@gmail.com",
@@ -16,14 +24,6 @@
     "dependencies": {
         "jquery": ">=v1.11"
     },
-    "description": "HTML form elements addmore",
-    "keywords": [
-        "addmore",
-        "jquery",
-        "fields",
-        "multiple",
-        "form"
-    ],
     "homepage": "https://github.com/i-stone/fieldsaddmore",
     "bugs": "https://github.com/i-stone/fieldsaddmore/issues",
     "docs": "https://github.com/i-stone/fieldsaddmore",
