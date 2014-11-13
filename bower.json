@@ -13,7 +13,7 @@
                 "**/rainbow.css",
                 "**/jquery.js",
                 "**/jquery.css",
-                "samples",
+                "example",
                 "spec",
                 "bourbon",
                 "neat",
